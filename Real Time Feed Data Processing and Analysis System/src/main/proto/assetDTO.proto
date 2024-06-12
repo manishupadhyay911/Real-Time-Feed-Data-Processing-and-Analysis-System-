@@ -1,0 +1,41 @@
+syntax="proto3";
+option java_package="com.example.finaldemo.proto";
+option java_multiple_files=true;
+import "google/protobuf/timestamp.proto";
+
+message AssetDTO{
+  string metal=1;
+  string currency=2;
+  google.protobuf.Timestamp date=3;
+  string weight_unit=4;
+  double ask=5;
+  double mid=6;
+  double bid=7;
+  double value=8;
+  double performance=9;
+  google.protobuf.Timestamp created_ts=10;
+  google.protobuf.Timestamp updated_ts=11;
+}
+message AssetDtoResponse{
+  repeated AssetDTO asset_response=1;
+}
+message HistoricalSpotPriceDto{
+  google.protobuf.Timestamp date=1;
+  string weight_unit=2;
+  double close=3;
+  double high=4;
+  double low=5;
+  double open=6;
+}
+message HistoricalEmbedded{
+  repeated AssetDTO items=1;
+  int32 markets_closed=2;
+  HistoricalSpotPriceDto last_historical_spot_price=3;
+}
+message HistoryAssetDto{
+  string metal=1;
+  string currency=2;
+  string weight_unit=3;
+  HistoricalEmbedded embedded=4;
+}
+

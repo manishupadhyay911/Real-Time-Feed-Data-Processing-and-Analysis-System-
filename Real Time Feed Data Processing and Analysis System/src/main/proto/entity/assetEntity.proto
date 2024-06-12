@@ -1,0 +1,19 @@
+syntax="proto3";
+option java_package="com.example.finaldemo.proto.entity";
+option java_multiple_files=true;
+import "google/protobuf/timestamp.proto";
+
+message AssetEntity{
+  google.protobuf.Timestamp date = 1;
+  string currency = 2;
+  string code = 3;
+  double performance = 4;
+  double value = 5;
+  string weight_unit = 6;
+  google.protobuf.Timestamp created_ts = 7;
+  google.protobuf.Timestamp updated_ts = 8;
+}
+
+message AssetEntityList {
+  repeated AssetEntity asset_entity_list = 1;
+}

@@ -1,0 +1,12 @@
+syntax="proto3";
+option java_package="com.example.finaldemo.proto.entity";
+option java_multiple_files=true;
+import "entity/transactionEntity.proto";
+
+message TransactionPageResponse{
+  optional string token=1;
+  repeated TransactionEntity items=2;
+  optional string reverse_token=3;
+  optional bool has_next=4;
+  optional bool has_prev=5;
+}

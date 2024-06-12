@@ -1,0 +1,15 @@
+syntax="proto3";
+option java_package="com.example.finaldemo.proto.entity";
+option java_multiple_files=true;
+
+message UserAssetEntity{
+  string asset_name=1;
+  string email=2;
+  int32 quantity=3;
+  string created_ts=4;
+  string updated_ts=5;
+}
+
+message UserAssetEntityList{
+  repeated UserAssetEntity user_asset=1;
+}

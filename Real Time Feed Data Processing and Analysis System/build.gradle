@@ -1,0 +1,48 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.2.1'
+    id 'io.spring.dependency-management' version '1.1.4'
+    id 'com.google.protobuf' version '0.9.4'
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+
+java {
+    sourceCompatibility = '17'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    //spring web
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    //mysql
+    implementation 'com.mysql:mysql-connector-j'
+
+    //protobuf
+    implementation 'com.google.protobuf:protobuf-java:3.25.0'
+    implementation 'com.google.protobuf:protobuf-java-util:3.25.0'
+
+    //jdbc
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-jdbc', version: '3.2.1'
+
+    //Spring security
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+
+    // Aws sqs
+    implementation 'com.amazonaws:aws-java-sdk:1.12.637'
+
+    // Cache
+    implementation "redis.clients:jedis"
+
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}

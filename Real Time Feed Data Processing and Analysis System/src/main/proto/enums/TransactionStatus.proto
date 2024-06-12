@@ -1,0 +1,14 @@
+syntax="proto3";
+option java_package="com.example.finaldemo.proto.enums";
+option java_multiple_files=true;
+
+enum TransactionStatus {
+  SUCCESS = 0;
+  FAIlED = 1;
+  PENDING = 2;
+}
+
+enum TransactionType {
+  BUY = 0;
+  SELL = 1;
+}

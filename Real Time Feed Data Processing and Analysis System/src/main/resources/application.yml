@@ -1,0 +1,6 @@
+db:
+  jdbcDriver: com.mysql.cj.jdbc.Driver
+
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource

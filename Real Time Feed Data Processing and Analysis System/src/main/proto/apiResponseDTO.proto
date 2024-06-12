@@ -1,0 +1,9 @@
+syntax="proto3";
+option java_package="com.example.finaldemo.proto";
+option java_multiple_files=true;
+
+message ApiResponseDTO{
+  string status=1;
+  string message=2;
+  string timestamp=3;
+}

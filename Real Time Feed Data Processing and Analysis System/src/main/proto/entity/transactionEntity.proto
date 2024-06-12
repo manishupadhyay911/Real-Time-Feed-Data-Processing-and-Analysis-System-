@@ -1,0 +1,30 @@
+syntax="proto3";
+option java_package="com.example.finaldemo.proto.entity";
+option java_multiple_files=true;
+import "google/protobuf/timestamp.proto";
+message TransactionEntity{
+  string email=1;
+  string transaction_id=2;
+  string transaction_type=3;
+  string status=4;
+  double amount=5;
+  string code=6;
+  string currency=7;
+  int32 quantity=8;
+  google.protobuf.Timestamp created_ts=9;
+  google.protobuf.Timestamp updated_ts=10;
+}
+
+message TransactionResponse{
+  TransactionEntity data=1;
+  string status=2;
+  string transaction_id=3;
+}
+
+message TransactionList{
+  repeated TransactionEntity data=1;
+}
+
+message TransactionResponseList{
+  repeated TransactionResponse response=1;
+}

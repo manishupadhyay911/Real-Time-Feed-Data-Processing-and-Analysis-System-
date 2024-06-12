@@ -1,0 +1,11 @@
+syntax="proto3";
+
+option java_package="com.example.finaldemo.proto";
+option java_multiple_files=true;
+import "userAssetDTO.proto";
+import "userDTO.proto";
+
+message UserAssetResponseDTO{
+  UserDTO user=1;
+  UserAssetDTOList user_asset_dto_list=2;
+}

@@ -1,0 +1,17 @@
+syntax="proto3";
+option java_package="com.example.finaldemo.proto.entity";
+option java_multiple_files=true;
+
+message UserEntity{
+  string name = 1;
+  optional int32 id = 2;
+  string email = 3;
+  string password = 4;
+  double balance = 5;
+  string created_ts = 6;
+  string updated_ts = 7;
+}
+
+message UserEntityListResponse{
+  repeated UserEntity user_entity_list = 1;
+}

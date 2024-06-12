@@ -1,0 +1,16 @@
+syntax="proto3";
+option java_package="com.example.finaldemo.proto.enums";
+option java_multiple_files=true;
+
+enum Currency{
+  SGD = 0;
+  USD = 1;
+  INR = 2;
+  PKR = 3;
+}
+
+enum Unit{
+  g = 0;
+  kg = 1;
+  oz = 2;
+}
